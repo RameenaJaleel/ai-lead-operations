@@ -1,0 +1,16 @@
+{
+  "name": "ai-lead-operations-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy",
+    "cf-types": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "typescript": "latest",
+    "wrangler": "^4.141.0"
+  }
+}
