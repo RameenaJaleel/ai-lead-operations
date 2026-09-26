@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ai-lead-operations-demo",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-26",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ai-lead-operations-demo",
+      "database_id": "899cb10b-aa14-4454-a215-d765b5a15541",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "observability": { "enabled": true, "head_sampling_rate": 1 }
+}
